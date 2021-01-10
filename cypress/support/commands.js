@@ -15,15 +15,8 @@ Cypress.Commands.add('abbreviationRequest',({status=200,message='',delaySeconds=
         cy.contains(message).should('not.exist')
     }
     cy.get('button').contains('החל לפענח').click({force:true})
-    if(delaySeconds>0){
-        cy.get('[class*="spinner"').should('exist')
-    }
-    cy.wait('@api',{responseTimeout:1000*delaySeconds})
-    cy.wait('@genreclassify',{responseTimeout:1000*delaySeconds})
-    cy.get('[class*="spinner"').should('not.exist')
-    cy.get('@api').its('response.statusCode').should('eq',status)
 
     if(message.length>0){
-        cy.contains(message).should('exist')
+        cy.contains(message,{timeout:1000*delaySeconds+30000}).should('exist')
     }
 })
