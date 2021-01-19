@@ -14,7 +14,13 @@ Cypress.Commands.add('abbreviationRequest',({url,status=200,message='',delaySeco
   }
   cy.get('button').contains(/החל לפענח|החל פיענוח/g).click({force:true})
 
+
+
+  if(delaySeconds>0){
+    cy.get('[class*="spinner"]',{timeout:1000*delaySeconds}).should('not.exist')
+  }
+  
   if(message.length>0){
-    cy.contains(message,{timeout:1000*delaySeconds+30000}).should('exist')
-  }  
+    cy.contains(message).should('exist')
+  } 
 })
