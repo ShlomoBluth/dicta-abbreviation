@@ -1,18 +1,32 @@
-Cypress.Commands.add('abbreviationRequest',({url,status=200,message='',delaySeconds=0})=>{
-  cy.intercept('POST',url, {
-    delayMs:1000*delaySeconds,
-    statusCode: status
-  },)
+Cypress.Commands.add('closeWelcomeWindow',()=>{
   cy.get('body').then(($body) => {
     if($body.find('a[class="welcome-close-link"]').length){
       cy.get('a[class="welcome-close-link"]').click({force: true})
     }
   })
-  cy.get('[placeholder="הזן טקסט כאן"]').type('רשב"ג')
+})
+
+Cypress.Commands.add('abbreviationRun',(text)=>{
+  cy.get('[placeholder="הזן טקסט כאן"]').type(text)
+  cy.get('button').contains(/החל לפענח|החל פיענוח/g).click({force:true})
+})
+
+Cypress.Commands.add('resultsTests',(text)=>{
+  cy.get('div[class="options-list-container"]').within(()=>{
+    cy.get('span').contains(text).should('exist')
+  })
+})
+
+Cypress.Commands.add('abbreviationRequest',({url,status=200,message='',delaySeconds=0})=>{
+  cy.intercept('POST',url, {
+    delayMs:1000*delaySeconds,
+    statusCode: status
+  },)
+  cy.closeWelcomeWindow()
   if(message.length>0){
     cy.contains(message).should('not.exist')
   }
-  cy.get('button').contains(/החל לפענח|החל פיענוח/g).click({force:true})
+  cy.abbreviationRun('רשב"ג')
 
 
 
