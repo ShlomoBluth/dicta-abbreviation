@@ -2,7 +2,7 @@
 
 //run basic tests on abbreviation run
 
-let sizes = ['iphone-x',[1000, 660]]
+let sizes = [[1000, 660]]//'iphone-x',
 
 
 
