@@ -3,6 +3,7 @@
     "screenshotOnRunFailure": false,
     "defaultCommandTimeout": 10000,
     "reporter": "cypress-multi-reporters",
+    "baseUrl":"https://sharing-abbreviation.netlify.app/",
     "reporterOptions": {
         "configFile": "reporter-config.json"
     }
