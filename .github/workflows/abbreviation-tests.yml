@@ -40,7 +40,7 @@ jobs:
       #if: ${{ always() }}
 
     - name: Run firefox requests tests
-      run: npx cypress run --browser firefox --spec ./cypress/integration/basicTestst.js
+      run: npx cypress run --browser firefox --spec ./cypress/integration/basicTests.js
       if: ${{ always() }}
 
 
