@@ -12,9 +12,7 @@ Cypress.Commands.add('abbreviationRun',(text)=>{
 })
 
 Cypress.Commands.add('resultsTests',(text)=>{
-  cy.get('div[class="options-list-container"]').within(()=>{
-    cy.get('span').contains(text).should('exist')
-  })
+  cy.get('span[class="expansion"]').contains(text).should('exist')
 })
 
 Cypress.Commands.add('abbreviationRequest',({url,status=200,message='',delaySeconds=0})=>{
