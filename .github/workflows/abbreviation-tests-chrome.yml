@@ -28,12 +28,12 @@ jobs:
         $(npm bin)/cypress cache list
         $(npm bin)/cypress verify
 
-    #- name: Run chrome tests
-      #run: npx cypress run --browser chrome --spec ./cypress/integration/requestsTests.js
-
-
-    - name: Run chrome requests tests
+    - name: Run chrome tests
       run: npx cypress run --browser chrome --spec ./cypress/integration/basicTests.js
+
+
+    #- name: Run chrome requests tests
+      #run: npx cypress run --browser chrome --spec ./cypress/integration/requestsTests.js
       #if: ${{ always() }}
 
 
