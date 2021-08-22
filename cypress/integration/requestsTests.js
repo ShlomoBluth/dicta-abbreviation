@@ -13,7 +13,7 @@ sizes.forEach((size) => {
     
     beforeEach(() => {
       cy.screenSize({size:size})
-      cy.visit('https://abbreviation.dicta.org.il/')
+      cy.visitpage({url:'https://abbreviation.dicta.org.il/'})
     })
   
     
