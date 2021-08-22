@@ -7,3 +7,6 @@
 [submodule "temp"]
 	path = temp
 	url = https://github.com/ShlomoBluth/workflows.git
+[submodule "workflows"]
+	path = workflows
+	url = https://github.com/ShlomoBluth/workflows.git
