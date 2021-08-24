@@ -8,7 +8,7 @@
         "configFile": "dicta-shared/reporter-config.json"
     },
     "env":{
-        "BASIC_TESTS":true,
+        "TOOL_TESTS":true,
         "REQUESTS_TESTS":false,
         "RECORD_KEY":"3c597451-cd7d-4ad6-a7df-9fac272ea4d6s"
     }
