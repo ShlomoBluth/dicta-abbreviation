@@ -27,9 +27,8 @@ urls.forEach((urlValue,urlKey)=>{
     
             it('abbreviation run',()=>{
                 cy.closeWelcomeWindow()
-                cy.abbreviationRun('חכ"א').then(()=>{
-                    cy.resultsTests('חכמים אומרים')
-                })
+                cy.abbreviationRun('חכ"א')
+                cy.resultsTests('חכמים אומרים')
             })
         })
     
