@@ -13,11 +13,13 @@ Cypress.Commands.add('abbreviationRun',(text)=>{
 
 Cypress.Commands.add('resultsTests',(text)=>{
   cy.url().then(url=>{
-    if(url==Cypress.env('DEV_URL')){
-      cy.get('.expansion').contains(text).should('exist')
-    }else{
-      cy.get('.main-results-box > p').contains(text).should('exist')
-    }
+    cy.wait(10000).then(()=>{
+      if(url==Cypress.env('DEV_URL')){
+        cy.get('.expansion').contains(text).should('exist')
+      }else{
+        cy.get('.main-results-box > p').contains(text).should('exist')
+      }
+    })
   })
 })
 
