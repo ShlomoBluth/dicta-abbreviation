@@ -16,7 +16,7 @@ Cypress.Commands.add('resultsTests',(text)=>{
     if(url==Cypress.env('DEV_URL')){
       cy.get('.expansion').contains(text).should('exist')
     }else{
-      cy.get('.main-results-box > p').contains(text).should('exist')
+      cy.get('.main-results-box > p',{timeout:60000}).contains(text).should('exist')
     }
   })
 })

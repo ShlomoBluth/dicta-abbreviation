@@ -18,7 +18,7 @@ urls.forEach((urlValue,urlKey)=>{
     sizes.forEach((sizeValue,sizeKey) => {
 
     
-        describe('basicTests '+urlKey+' '+sizeKey,()=>{
+        describe('toolTests '+urlKey+' '+sizeKey,()=>{
     
             beforeEach(() => {
                 cy.screenSize({size:sizeValue})
