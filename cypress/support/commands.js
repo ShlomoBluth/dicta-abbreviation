@@ -13,7 +13,9 @@ Cypress.Commands.add('abbreviationRun',(text)=>{
 
 Cypress.Commands.add('resultsTests',(text)=>{
   cy.url().then(url=>{
-    cy.wait(10000).then(()=>{
+    cy.log(url)
+    cy.log(Cypress.env('DEV_URL'))
+    cy.wait(60000).then(()=>{
       if(url==Cypress.env('DEV_URL')){
         cy.get('.expansion').contains(text).should('exist')
       }else{
