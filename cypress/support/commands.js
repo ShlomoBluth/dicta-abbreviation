@@ -11,12 +11,12 @@ Cypress.Commands.add('abbreviationRun',(text)=>{
   cy.get('button').contains(/החל לפענח|החל פיענוח/g).click({force:true})
 })
 
-Cypress.Commands.add('resultsTests',({text,url})=>{
-  cy.url().then(u=>{
-    if(u==url){
+Cypress.Commands.add('resultsTests',(text)=>{
+  cy.url().then(url=>{
+    if(url==Cypress.env('DEV_URL')){
       cy.get('.expansion').contains(text).should('exist')
     }else{
-      cy.get('.main-results-box > p',{timeout:60000}).contains(text).should('exist')
+      cy.get('.main-results-box > p').contains(text).should('exist')
     }
   })
 })
