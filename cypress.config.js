@@ -5,6 +5,10 @@ module.exports = defineConfig({
   projectId: '2bfjxa',
   screenshotOnRunFailure: false,
   defaultCommandTimeout: 10000,
+  reporter: 'cypress-multi-reporters',
+  reporterOptions: {
+    configFile: 'dicta-shared/reporter-config.json',
+  },
   env: {
     DEV_URL: 'https://sharing-abbreviation.netlify.app/',
     LIVE_URL: 'https://abbreviation.dicta.org.il/',
