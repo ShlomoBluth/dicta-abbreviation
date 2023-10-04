@@ -1,0 +1,145 @@
+{
+  "stats": {
+    "suites": 2,
+    "tests": 2,
+    "passes": 2,
+    "pending": 0,
+    "failures": 0,
+    "start": "2023-10-04T10:37:18.377Z",
+    "end": "2023-10-04T10:37:30.235Z",
+    "duration": 11858,
+    "testsRegistered": 2,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "168033a6-b6ae-4f1a-9823-11a818f3fe6c",
+      "title": "",
+      "fullFile": "cypress\\e2e\\toolTests.js",
+      "file": "cypress\\e2e\\toolTests.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "1ec14ae1-494c-4fdf-bf48-6bd1e7ab2b6c",
+          "title": "toolTests live desktop",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "abbreviation run",
+              "fullTitle": "toolTests live desktop abbreviation run",
+              "timedOut": null,
+              "duration": 4540,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "\"videos/toolTests.js.mp4\"",
+              "code": "cy.closeWelcomeWindow();\ncy.abbreviationRun('חכ\"א');\ncy.resultsTests('חכמים אומרים');",
+              "err": {},
+              "uuid": "d5fe25fc-7d65-4ea4-807d-3f8cfef77f43",
+              "parentUUID": "1ec14ae1-494c-4fdf-bf48-6bd1e7ab2b6c",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "d5fe25fc-7d65-4ea4-807d-3f8cfef77f43"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 4540,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        },
+        {
+          "uuid": "23aa139d-9e81-484d-aaa2-34de6c4a9462",
+          "title": "toolTests dev desktop",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "abbreviation run",
+              "fullTitle": "toolTests dev desktop abbreviation run",
+              "timedOut": null,
+              "duration": 2927,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": "\"videos/toolTests.js.mp4\"",
+              "code": "cy.closeWelcomeWindow();\ncy.abbreviationRun('חכ\"א');\ncy.resultsTests('חכמים אומרים');",
+              "err": {},
+              "uuid": "5abf1e97-fcbd-48a5-80a1-bccb8ed514df",
+              "parentUUID": "23aa139d-9e81-484d-aaa2-34de6c4a9462",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "5abf1e97-fcbd-48a5-80a1-bccb8ed514df"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 2927,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.2"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/results/json",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "5.2.0"
+    }
+  }
+}
