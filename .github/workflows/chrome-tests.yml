@@ -29,8 +29,8 @@ jobs:
 
     - name: Install a project with a clean slate
       run: |
-        ls /__w/dicta-abbreviation/dicta-abbreviation
         npm install --save-dev cypress@12.1.0
+        ls /__w/dicta-abbreviation/dicta-abbreviation
         $(npm bin)/cypress cache path
         $(npm bin)/cypress cache list
         $(npm bin)/cypress verify
