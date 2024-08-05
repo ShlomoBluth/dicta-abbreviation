@@ -1,0 +1,15 @@
+[submodule "dicta-shared"]
+	path = dicta-shared
+	url = https://github.com/ShlomoBluth/dicta-shared.git
+[submodule ".github"]
+	path = .github
+	url = https://github.com/ShlomoBluth/workflows.git
+[submodule "temp"]
+	path = temp
+	url = https://github.com/ShlomoBluth/workflows.git
+[submodule "workflows"]
+	path = workflows
+	url = https://github.com/ShlomoBluth/workflows.git
+[submodule ".github/workflows"]
+	path = .github/workflows
+	url = https://github.com/ShlomoBluth/workflows.git
