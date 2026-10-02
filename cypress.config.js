@@ -12,17 +12,12 @@ module.exports = defineConfig({
   env: {
     DEV_URL: 'https://sharing-abbreviation.netlify.app/',
     LIVE_URL: 'https://abbreviation.dicta.org.il/',
-    TOOL_TESTS: true,
-    REQUESTS_TESTS: false,
-    RECORD_KEY: '3c597451-cd7d-4ad6-a7df-9fac272ea4d6s',
   },
   e2e: {
-    // We've imported your old cypress plugins here.
-    // You may want to clean this up later by importing these.
-    setupNodeEvents(on, config) {
-      return require('./cypress/plugins/index.js')(on, config)
-    },
     baseUrl: 'https://sharing-abbreviation.netlify.app/',
-    specPattern: 'cypress/e2e/**/*.{js,jsx,ts,tsx}',
+    specPattern: 'cypress/e2e/**/*.cy.{js,jsx,ts,tsx}',
+    setupNodeEvents(on) {
+      require('./dicta-shared/videoCleanup')(on)
+    },
   },
 })
